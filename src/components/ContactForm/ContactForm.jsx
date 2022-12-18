@@ -13,7 +13,7 @@ export const ContactForm = () => {
       contact => name.toLowerCase() === contact.name.toLocaleLowerCase()
     )
       ? alert(`${name} is already in contacts`)
-      : dispatch(addContact(name, number));
+      : dispatch(addContact({name, number}));
   };
 
   const handleSubmit = evt => {
