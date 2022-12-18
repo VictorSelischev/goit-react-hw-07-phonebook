@@ -29,7 +29,20 @@ export const contactsSlice = createSlice({
     [fetchContacts.rejected](state, action) {
       state.contacts.isLoading = false;
       state.contacts.error = action.payload;
-     },
+    },
+    
+    [addContact.pending](state) { 
+      state.contacts.isLoading = true;
+    },
+    [addContact.fulfilled](state, action) { 
+      state.contacts.isLoading = false;
+      state.contacts.error = null;
+      state.contacts.items.unshift(action.payload);
+    },
+    [addContact.rejected](state, action) { 
+      state.contacts.isLoading = false;
+      state.contacts.error = action.payload;
+    },
   },
   // reducers: {
   //   addContact: {
