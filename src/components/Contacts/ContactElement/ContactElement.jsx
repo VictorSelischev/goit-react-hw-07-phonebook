@@ -9,7 +9,7 @@ export const ContactElement = ({ contact }) => {
   // const handelDelete = () => dispatch(deleteContact(contact.id));
 
   return (
-    <div>
+    <div className={css.contact__item}>
       <span className={css.contact__name}>
         {contact.name}: {contact.number}
       </span>
