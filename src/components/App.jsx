@@ -36,7 +36,7 @@ export const App = () => {
       </Section>
       <Section title={'Contacts'}>
         <Filter />
-        {isLoading && !error && <p>Loading Phone contacts...</p>}
+        {isLoading && !error && <b>Loading Phone contacts...</b>}
         <ContactsList />
       </Section>
     </div>

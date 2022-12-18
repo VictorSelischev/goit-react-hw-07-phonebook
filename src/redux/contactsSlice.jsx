@@ -17,7 +17,7 @@ const contactsInitialState = {
 export const contactsSlice = createSlice({
   name: 'contacts',
   initialState: contactsInitialState,
-  exportReducers: {
+  extraReducers: {
     [fetchContacts.pending](state) {
       state.contacts.isLoading = true;
     },
