@@ -1,12 +1,12 @@
 import css from './ContactElement.module.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-// import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'services/operations';
 
 export const ContactElement = ({ contact }) => {
   const dispatch = useDispatch();
 
-  // const handelDelete = () => dispatch(deleteContact(contact.id));
+  const handleDelete = () => dispatch(deleteContact(contact.id));
 
   return (
     <div className={css.contact__item}>
@@ -14,7 +14,7 @@ export const ContactElement = ({ contact }) => {
         {contact.name}: {contact.number}
       </span>
       <button type="button"
-        // onClick={handelDelete}
+        onClick={handleDelete}
       >
         Delete
       </button>
