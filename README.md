@@ -6,3 +6,4 @@ goit-react-hw-07-phonebook
 - redux
 - react-redux
 - @reduxjs/toolkit
+- axios
